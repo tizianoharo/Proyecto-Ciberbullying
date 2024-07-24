@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 * {
   margin: 0;
@@ -11,11 +14,14 @@ body {
 }
 
 header {
+  z-index: 100;
   position: fixed;
+  top: 0%;
   width: 100%;
   background-color: #000;
   padding-bottom: 3px;
   font-weight: 700;
+  font-family: 'Noto Sans', sans-serif;
 }
 header .logo {
   background: #fff; 
@@ -27,7 +33,7 @@ header .logo {
 .nav-bar {
   /* background: #5dc246; */
   background: linear-gradient( #5dc246, #448d34);
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 2rem;
   border: solid 2px;
   display: flex;
   justify-content: space-between;
@@ -48,3 +54,24 @@ header .logo {
   transition: all 0.25s;
 }
 
+main {
+  max-width: 85%;
+  margin: auto;
+  position: relative;
+  top: 60px;
+}
+
+#inicio-INF {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 0;
+}
+#inicio-INF h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 7px;
+}
+#inicio-INF img{
+  width: 400px;
+}
