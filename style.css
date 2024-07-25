@@ -83,6 +83,7 @@ hr {
   opacity: 0.2;
 }
 
+
 #significado-origen-INF {
   display: flex;
   justify-content: space-evenly;
@@ -91,6 +92,7 @@ hr {
   padding: 4rem 0;
 }
 #significado-origen-INF article {
+  max-width: 450px;
   background: linear-gradient(rgba(0, 47, 255, 0.253), rgba(255, 255, 255, 0));
   padding: 1rem;
   border-top-left-radius: 1rem;
@@ -101,7 +103,6 @@ hr {
 }
 #significado-origen-INF p {
   text-align: justify;
-  max-width: 450px;
   margin: 2rem 0;
   line-height: 1.6rem;
 }
@@ -114,3 +115,27 @@ hr {
   border-radius: 1rem;
   transition: all 0.4s;
 }
+
+#tipos-INF {
+  text-align: center;
+  padding: 4rem 0;
+}
+#tipos-INF h3 {
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+#tipos-INF .tipos-CB {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+#tipos-INF article {
+  max-width: 300px;
+  padding: 1rem;
+  background: linear-gradient(rgba(0, 47, 255, 0.253), rgba(255, 255, 255, 0));
+}
+#tipos-INF article p{
+  margin: 1rem 0;
+}
+
+
