@@ -10,6 +10,7 @@
 }
 
 body {
+  
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -32,7 +33,8 @@ header .logo {
 
 .nav-bar {
   /* background: #5dc246; */
-  background: linear-gradient( #5dc246, #448d34);
+  /* background: linear-gradient( #58b842, #6dda55); */
+  background: linear-gradient( #637cad, #5453b4);
   padding: 0.7rem 2rem;
   border: solid 2px;
   display: flex;
@@ -75,3 +77,30 @@ main {
 #inicio-INF img{
   width: 400px;
 }
+
+hr {
+  border: solid 1px rgb(136, 136, 136);
+  opacity: 0.2;
+}
+
+/* #significado-origen-INF {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  text-align: center;
+  padding: 4rem 0;
+}
+#significado-origen-INF p {
+  text-align: justify;
+  max-width: 500px;
+  margin: 2rem 0;
+}
+#significado-origen-INF img {
+  width: 400px;
+}
+#significado-origen-INF article {
+  background: linear-gradient(rgba(0, 47, 255, 0.253), rgba(255, 255, 255, 0));
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+} */
