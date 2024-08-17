@@ -10,7 +10,6 @@
 }
 
 body {
-  
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,18 +24,27 @@ header {
   font-family: 'Noto Sans', sans-serif;
 }
 header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .logo-icon {
   background: #fff; 
   padding: 5px;
   border: solid 1px;
   border-radius: 50%;
 }
+header .logo-text {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
 
 .nav-bar {
   /* background: #5dc246; */
   /* background: linear-gradient( #58b842, #6dda55); */
-  background: linear-gradient( #637cad, #5453b4);
+  background: linear-gradient( #379d4a, #1ab231);
   padding: 0.7rem 2rem;
-  border: solid 2px #00000005;
+  border: solid 2px transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +75,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 #inicio-INF h1{
   font-family: 'Poppins', sans-serif;
