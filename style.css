@@ -41,8 +41,9 @@ header .logo-text {
 
 .nav-bar {
   /* background: #5dc246; */
-  /* background: linear-gradient( #58b842, #6dda55); */
-  background: linear-gradient( #379d4a, #1ab231);
+  background:  ;
+  background: linear-gradient(#1ab231, #4CAF50);
+  
   padding: 0.7rem 2rem;
   border: solid 2px transparent;
   display: flex;
@@ -87,8 +88,8 @@ main {
 }
 
 hr {
-  border: solid 1px rgb(136, 136, 136);
-  opacity: 0.2;
+  border: solid 1px #E0E0E0;
+  opacity: 0.6;
 }
 
 #significado-origen-INF {
@@ -105,61 +106,11 @@ hr {
 }
 .sinopsis {
   max-width: 1000px;
+  width: 100%;
 }
 .sinopsis-img img {
-  width: 500px;
+  width: 100%;
 }
 
-
-/* #significado-origen-INF {
-  text-align: center;
-  padding: 4rem 0;
-}
-#significado-origen-INF article {
-  max-width: 450px;
-  background: linear-gradient(rgba(0, 47, 255, 0.253), rgba(255, 255, 255, 0));
-  padding: 1rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-#significado-origen-INF h3 {
-  font-size: 1.25rem;
-}
-#significado-origen-INF p {
-  text-align: justify;
-  margin: 2rem 0;
-  line-height: 1.6rem;
-}
-#significado-origen-INF img {
-  width: 400px;
-}
-#significado-origen-INF article:hover {
-  background: rgba(0, 47, 255, 0.205);
-  padding: 1rem;
-  border-radius: 1rem;
-  transition: all 0.4s;
-} */
-
-#tipos-INF {
-  text-align: center;
-  padding: 4rem 0;
-}
-#tipos-INF h3 {
-  font-size: 20px;
-  margin-bottom: 2rem;
-}
-#tipos-INF .tipos-CB {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 2rem;
-}
-#tipos-INF article {
-  max-width: 300px;
-  padding: 1rem;
-  background: linear-gradient(rgba(0, 47, 255, 0.253), rgba(255, 255, 255, 0));
-}
-#tipos-INF article p{
-  margin: 1rem 0;
-}
 
 
