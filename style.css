@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-header: #1ab231;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -18,8 +22,6 @@ header {
   position: fixed;
   top: 0%;
   width: 100%;
-  background-color: #0000006b;
-  padding-bottom: 3px;
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -41,10 +43,9 @@ header .logo-text {
 
 .nav-bar {
   /* background: #5dc246; */
-  background: linear-gradient(#1ab231, #4CAF50);
-  
-  padding: 0.7rem 2rem;
-  border: solid 2px transparent;
+  background: linear-gradient(var(--clr-header),#23af38, #2cb340, #41b452, #ffffff46);
+  padding: 1rem 2rem;
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +78,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 8rem 0;
+  margin: 3rem 0;
 }
 #inicio-INF h1{
   font-family: 'Poppins', sans-serif;
