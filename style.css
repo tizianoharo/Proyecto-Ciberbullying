@@ -11,6 +11,7 @@
 
 :root {
   --clr-header: #1ab231;
+  --clr-1thSection: #173020;
 }
 
 body {
@@ -43,7 +44,7 @@ header .logo-text {
 
 .nav-bar {
   /* background: #5dc246; */
-  background: linear-gradient(var(--clr-header),#23af38, #2cb340, #41b452, #ffffff46);
+  background: linear-gradient(var(--clr-header),#23af38, #2cb340, #41b452,  #ffffff00);
   padding: 1rem 2rem;
   border: none;
   display: flex;
@@ -66,18 +67,16 @@ header .logo-text {
 }
 
 main {
-  max-width: 85%;
-  margin: auto;
   position: relative;
   top: 60px;
 }
 
+/* Inicio */
 #inicio-INF {
-  background-image: url();
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8rem 0;
+  padding: 8rem 5%;
   margin: 3rem 0;
 }
 #inicio-INF h1{
@@ -94,9 +93,11 @@ hr {
   opacity: 0.6;
 }
 
+/* 1era Sección */
 #significado-origen-INF {
+  background-color: var(--clr-1thSection);
   text-align: justify;
-  padding: 4rem 0;
+  padding: 4rem 5%;
 }
 #significado-origen-INF hr{
   max-width: 70%;
@@ -115,8 +116,10 @@ hr {
 }
 .sinopsis h3 {
   font-size: 2.5rem;
+  text-shadow: 0 1px 10px #ffffff60;
 }
 .sinopsis p {
+  color: #fff;
   margin: 1rem 0;
   font-family: 'Poppins', sans-serif;
 }
@@ -127,3 +130,5 @@ hr {
 .origen .sinopsis h3{
   text-align: right;
 }
+
+/* 2da Sección */
