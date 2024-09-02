@@ -11,7 +11,7 @@
 
 :root {
   --clr-header: #1ab231;
-  --clr-1thSection: #173020;
+  --clr-1thSection: #174729;
 }
 
 body {
@@ -23,6 +23,8 @@ header {
   position: fixed;
   top: 0%;
   width: 100%;
+  background-color: #0000006b;
+  padding-bottom: 3px;
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
 }
@@ -44,9 +46,10 @@ header .logo-text {
 
 .nav-bar {
   /* background: #5dc246; */
-  background: linear-gradient(var(--clr-header),#23af38, #2cb340, #41b452,  #ffffff00);
-  padding: 1rem 2rem;
-  border: none;
+  background: linear-gradient(#1ab231, #4CAF50);
+  
+  padding: 0.7rem 2rem;
+  border: solid 2px transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +116,6 @@ main {
 }
 .sinopsis h2 {
   font-size: 2.5rem;
-  text-shadow: 0 1px 10px #ffffff;
 }
 .sinopsis p {
   color: #fff;
