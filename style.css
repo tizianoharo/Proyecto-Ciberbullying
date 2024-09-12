@@ -11,7 +11,8 @@
 
 :root {
   --clr-header: #1ab231;
-  --clr-1thSection: #174729;
+  --clr-title: #1f663a;
+  --clr-subTitle: #2d9153;
 }
 
 body {
@@ -87,6 +88,7 @@ main {
   font-size: 5rem;
   letter-spacing: 7px;
   width: 100%;
+  text-transform: uppercase;
   text-align: center;
   color: #fff;
 }
@@ -98,13 +100,20 @@ main {
 #significado-origen-INF {
   /* background-color: var(--clr-1thSection); */
   text-align: justify;
-  padding: 8rem 10%;
+  padding: 6.25rem 10%;
 }
 #significado-origen-INF hr{
   max-width: 70%;
   margin: 3rem auto;
   border: solid 1px #999999;
   opacity: 0.3;
+}
+#significado-origen-INF h1 {
+  display: block;
+  color: var(--clr-title);
+  text-decoration: underline;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 .significado {
   display: flex;
@@ -118,7 +127,8 @@ main {
   width: 100%;
 }
 .sinopsis h2 {
-  font-size: 2.5rem;
+  color: var(--clr-subTitle);
+  font-size: 1.5rem;
 }
 .sinopsis p {
   color: #1b1414;
