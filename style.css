@@ -75,7 +75,7 @@ main {
 }
 
 /* Inicio */
-#inicio-INF {
+#inicio-Section {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(imagenes/fondo.jpg) no-repeat center fixed;
   background-size: cover;
   display: flex;
@@ -83,33 +83,33 @@ main {
   align-items: center;
   padding: 11rem 5%;
 }
-#inicio-INF h1{
+#inicio-Section h1{
   font-family: 'Poppins', sans-serif;
   font-size: 5rem;
   letter-spacing: 7px;
   width: 100%;
   text-transform: uppercase;
+  text-decoration: none;
   text-align: center;
   color: #fff;
 }
-#inicio-INF img{
+#inicio-Section img{
   width: 400px;
 }
 
 /* 1era Sección */
-#significado-origen-INF {
+#introduccion-Section {
   /* background-color: var(--clr-1thSection); */
   text-align: justify;
   padding: 6.25rem 10%;
 }
-#significado-origen-INF hr{
+#introduccion-Section hr{
   max-width: 70%;
   margin: 3rem auto;
   border: solid 1px #999999;
   opacity: 0.3;
 }
-#significado-origen-INF h1 {
-  display: block;
+h1 {
   color: var(--clr-title);
   text-decoration: underline;
   font-size: 2rem;
@@ -126,7 +126,7 @@ main {
   max-width: 80%;
   width: 100%;
 }
-.sinopsis h2 {
+h2 {
   color: var(--clr-subTitle);
   font-size: 1.5rem;
 }
@@ -144,12 +144,13 @@ main {
 }
 
 /* 2da Sección */
-#tipos-INF {
-  padding: 4rem 5%;
+#tipos-Section {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  padding: 6.25rem 10%;
   display: grid;
   gap: 3rem;
 }
-#tipos-INF h2 {
+#tipos-Section h2 {
   letter-spacing: 5px;
   text-transform: uppercase;
   text-align: center;
@@ -162,7 +163,7 @@ main {
   align-items: center;
   gap: 1rem;
 }
-.tipos-CB .tipo {
+.tipos-CB .tipoUniv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,7 +176,7 @@ main {
   background: linear-gradient(rgb(20, 70, 40), rgb(104, 165, 24), transparent);
   border-radius: 1rem;
 }
-.tipo:hover {
+.tipoUniv:hover {
   border: solid 2px black;
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -191,13 +192,13 @@ main {
   min-height: 400px;
 } */
 
-.tipos-CB .tipo h3{
+.tipos-CB .tipoUniv h3{
   letter-spacing: 2px;
   font-size: 1.5rem;
   color: #fff;
   text-shadow: 0 1px 10px #000;
 }
-.tipos-CB .tipo p{
+.tipos-CB .tipoUniv p{
   margin: 1rem 0;
   font-family: 'Poppins', sans-serif;
   text-align: left;
