@@ -10,10 +10,13 @@
 }
 
 :root {
-  --clr-header-top: #f79009;
-  --clr-header-bottom: #dacd19;
-  --clr-title: #1f663a;
-  --clr-subTitle: #14da60;
+  /* --clr-header-top: #f79009;
+  --clr-header-bottom: #dacd19; */
+  --clr-header-top: #FF8F00;
+  --clr-header-bottom: #FFDB00;
+  --clr-title: #2e7d46;
+  --clr-subTitle: #D5ED9F;
+  --BG-2ndSection: #e7e7e7;
 }
 
 body {
@@ -74,9 +77,8 @@ main {
   top: 56px;
 }
 
-.container {
+.content {
   max-width: 1280px;
-  padding: 0 3rem;
   margin: auto;
 }
 
@@ -99,41 +101,50 @@ main {
   text-align: center;
   color: #fff;
 }
+
 #inicio-Section img{
   width: 400px;
 }
 
-/* 1era Sección */
-#introduccion-Section {
-  /* background-color: var(--clr-1thSection); */
+section:not(section[id="ImpactoAcademico-subSect"], [id="rolAyuda-subSect"]) {
   text-align: justify;
-  padding: 6.25rem 0;
+  padding: 5rem 0;
 }
+
+/* 1era Sección */
 #introduccion-Section hr{
   max-width: 70%;
   margin: 3rem auto;
   border: solid 1px rgba(0, 0, 0, 0.2);
 }
 h1 {
-  color: var(--clr-title);
   text-decoration: underline;
   font-size: 2rem;
-  margin-bottom: 20px;
+  color: #2e7d46;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
 }
 .significado {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin: 1rem 0;
 }
 .sinopsis {
   max-width: 80%;
   width: 100%;
 }
-h2 {
-  color: var(--clr-subTitle);
-  font-size: 1.5rem;
+.sinopsis h2 {
+  color: #1B5E20;
+  background-color: #E8F5E9; 
+  padding: 10px 0;
+  border-bottom: 2px solid #1B5E20;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .sinopsis p {
   color: #1b1414;
@@ -144,12 +155,53 @@ h2 {
 .significado img {
   width: 300px;
 }
-.origen .sinopsis h2{
-  text-align: right;
-}
 
 /* 2da Sección */
 #tipos-Section {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  
+  background: var(--BG-2ndSection); 
 }
+
+.tipos-CB {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.tipos-CB .tipoUniv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  border: solid 1px #00000080;
+  border-left-width: 10px;
+  transition: all 0.25s ease;
+}
+.tipoUniv:first-child {
+  /* background: #ff9305; */
+  background: #F6E96B;
+}
+.tipoUniv:nth-child(2) {
+  /* background: #ffc505; */
+  background: #BEDC74;
+}
+.tipoUniv:last-child {
+  /* background: #e6ff05; */
+  background: #A2CA71;
+}
+.tipoUniv h2 {
+  letter-spacing: 2px;
+  color: #fff;
+}
+.tipoUniv p {
+  margin-top: 1rem ;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  word-spacing: 2px;
+}
+.tipoUniv:hover {
+  transform: scale(1.02);
+  border-radius: 0 12px;
+}
+
