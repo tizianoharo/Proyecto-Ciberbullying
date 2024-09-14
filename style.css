@@ -52,7 +52,7 @@ header .logo-text {
 .nav-bar {
   /* background: #5dc246; */
   background: linear-gradient(var(--clr-header-top), var(--clr-header-bottom));
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
