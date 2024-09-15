@@ -89,6 +89,10 @@ h2 {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+hr {
+  margin: 3rem auto;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
 p {
   font-size: 14px;
 }
@@ -241,3 +245,48 @@ li::marker {
   font-size: 13px;
 }
 
+/* 1era Subseccion - Impacto Academico */
+#ImpactoAcadem-subSect, #rolAyuda-subSect {
+  margin-left: 4rem;
+}
+#ImpactoAcadem-subSect hr {
+  max-width: 90%;
+}
+#ImpactoAcadem-subSect h2 {
+  text-decoration: double underline;
+}
+#ImpactoAcadem-subSect img {
+  display: grid;
+  margin: 2rem auto;
+  width: 90%;
+  height: 400px;
+}
+
+/* 2da Subseccion - Roles Esenciales */
+#rolAyuda-subSect {
+  background: #e6f5e9;
+  margin: 2rem 0;
+  margin-left: 4rem;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.roles-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 3rem;
+}
+.roles-list b {
+  text-transform: capitalize;
+  color: #155724;
+}
+.roles-list li p {
+  color: #1d7a37;
+}
+li::marker {
+  font-size: 13px;
+}
+
+/* 4ta Seccion - Estrategias */
+#estratPerp-Section {
+  background-color: var(--BG-2ndSection);
+}
