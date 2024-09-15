@@ -19,6 +19,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: var(--BG-2ndSection);
 }
 
 header {
@@ -70,9 +71,56 @@ header .logo-text {
   transition: all 0.25s;
 }
 
+
 main {
-  position: relative;
-  top: 56px;
+  max-width: 1280px;
+  display: grid;
+  place-content: center;
+  align-items: top;
+  margin: auto;
+  grid-template-columns: 20% 80%;
+}
+
+aside {
+  position: sticky;
+  top: 2rem;
+  padding-top: 40px;
+  width: 90%;
+}
+
+aside a {
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #004a0e;
+  display: block;
+  padding: 1rem;
+  background-color: #E8F5E9; 
+  border-bottom: 2px solid green;
+}
+aside a:hover {
+  font-weight: 500;
+  background-color: #c8f0cc;
+  transition: all 0.3s ease; 
+}
+.subSeccion {  
+  display: none;
+}
+
+.introduccion-opt:active {
+  .subSeccion {
+    display: initial;
+    position: relative;
+    left: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+}
+.subSeccion a:first-child:hover {
+  background-color: rgb(100, 100, 102);
+}
+.subSeccion a:last-child:hover {
+  background-color: rgb(120, 120, 120);
 }
 
 .content {
@@ -109,6 +157,7 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 11rem 0;
+  margin-top: 53px;
 }
 #inicio-Section h1{
   font-family: 'Poppins', sans-serif;
@@ -218,7 +267,7 @@ h1 {
 }
 .tipoUniv:hover {
   transform: scale(1.02);
-  border-radius: 0 12px;
+  border-radius: 0 0 12px 12px;
 }
 
 
