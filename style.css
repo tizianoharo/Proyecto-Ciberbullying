@@ -365,3 +365,48 @@ li::marker {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+/* 5ta Seccion - Medidas de proteccion */
+
+.medidaUniv {
+  z-index: 1;
+  position: relative;
+  background: linear-gradient( rgba(255, 226, 173, 0.6), rgba(255, 162, 63, 0.75));
+  box-shadow: 0 5px 10px #00000062;
+  padding: 1rem;
+  height: 80px;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.title-box {
+  z-index: 2;
+  background-color: #fff1a9;
+  border-radius: 6px;
+  border-bottom: solid 2px #030303;
+  border-top: solid 2px #030303;
+  padding: 0.5rem;
+  position: absolute;
+  top: -1rem;
+}
+
+.content-box {
+  border-left: solid 2px #030303;
+  border-radius: 0 12px 12px 0;
+  font-weight: 500;
+  min-height: 80px;
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  padding: 1rem;
+  top: 2rem;
+  left: 5rem;
+  background-color: rgba(155, 116, 76, 0.899);
+  box-shadow: 0 5px 10px #00000062;
+}
+
+.medidasProtec-CB {
+  display: grid;
+  gap: 5rem;
+  margin: 3rem 0;
+}
