@@ -340,14 +340,16 @@ li::marker {
 .estratPerp-CB {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));gap: 20px;
-  margin: 3rem 2rem;
+  margin: 3rem 2rem 0;
 }
 .estratUniv {
   background: linear-gradient(135deg, #66b0964b, #1b5739a4);
   color: #fff;
   font-weight: 500;
   padding: 20px;
+  border-top: solid 2px rgb(0, 55, 32);
   border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(71, 71, 71, 0.476);
   text-align: center;
 }
 .estratUniv h2 {
