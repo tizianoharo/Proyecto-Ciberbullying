@@ -368,7 +368,7 @@ li::marker {
 
 /* 5ta Seccion - Medidas de proteccion */
 
-.medidaUniv {
+/* .medidaUniv {
   z-index: 1;
   position: relative;
   background: linear-gradient( rgba(255, 226, 173, 0.6), rgba(255, 162, 63, 0.75));
@@ -409,4 +409,4 @@ li::marker {
   display: grid;
   gap: 5rem;
   margin: 3rem 0;
-}
+} */
