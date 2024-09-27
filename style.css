@@ -15,7 +15,13 @@
   --clr-title: #2e7d46;
   --clr-subTitle: #41b664;
   --BG-2ndSection: #e7e7e7;
+  --clr-beige: #F6E96B;
+
+  /*Verdes*/
+  --clr-green: #BEDC74; 
+  --clr-greenV2: #A2CA71; 
 }
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -95,9 +101,9 @@ aside a {
   text-decoration: none;
   color: #004a0e;
   display: block;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   background-color: #E8F5E9; 
-  border-bottom: 2px solid green;
+  border-right: 2px solid green;
 }
 aside a:hover {
   font-weight: 500;
@@ -263,7 +269,7 @@ h1 {
   color: #fff;
 }
 .tipoUniv p {
-  margin-top: 1rem ;
+  margin-top: 1rem;
   font-family: 'Poppins', sans-serif;
 }
 .tipoUniv:hover {
@@ -331,9 +337,6 @@ li::marker {
 }
 .roles-list li p {
   color: #1d7a37;
-}
-li::marker {
-  font-size: 13px;
 }
 
 /* 4ta Seccion - Estrategias */
@@ -410,3 +413,58 @@ li::marker {
   gap: 5rem;
   margin: 3rem 0;
 } */
+
+.medidasProtec-CB {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.medidaUniv {
+  background: #e6f5e9;
+  border: solid 1px #98f1aa;
+  border-left: solid 3px #98f1aa;
+  border-radius: 6px;
+  height: 130px;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  padding: 0.5rem 1rem;
+}
+.medidaUniv:first-child,
+.medidaUniv:nth-child(3),
+.medidaUniv:last-child {
+  margin-right: 2rem;
+}
+.medidaUniv:nth-child(2),
+.medidaUniv:nth-child(4) {
+  margin-left: 2rem;
+}
+
+.separated {
+  width: 1280px;
+}
+
+.exercises {
+  background-color: rgba(228, 228, 228, 0.521);
+  max-width: 1280px;
+  margin: 1rem auto;
+  padding: 2rem 3rem;
+  border: solid 1px;
+  border-radius: 12px;
+}
+.exercises h1 {
+  text-decoration: none;
+}
+.exercises p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+.btn-prueba {
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  background-color: #000;
+  padding: 0.8rem 1.5rem;
+}
