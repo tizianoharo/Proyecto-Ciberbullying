@@ -446,9 +446,9 @@ li::marker {
 }
 
 .exercises {
-  background-color: rgba(241, 241, 241, 0.664);
+  background-color: rgba(214, 214, 214, 0.521);
   max-width: 1280px;
-  margin: 1rem auto;
+  margin: 5rem auto;
   padding: 2rem 3rem;
   border: solid 1px;
   border-radius: 12px;
@@ -459,11 +459,13 @@ li::marker {
   place-content: top;
 }
 .exercises h1 {
+  color: #00bf63;
   font-size: 32px;
   text-decoration: none;
   margin: 0;
 }
 .exercises h2 {
+  color: #7ed957;
   font-size: 22px;
   margin: 1rem 0  ;
 }
@@ -471,6 +473,7 @@ li::marker {
   font-size: 18px;
   margin: 1rem 0 3rem;
 }
+
 .btn-prueba {
   position: relative;
   font-size: 15px;
@@ -480,11 +483,8 @@ li::marker {
   text-decoration: none;
   color: white;
   border-radius: 12px;
-  background-color: var(--clr-subTitle);
+  background-color: #00bf63;
   padding: 1rem 2rem;
-}
-.btn-prueba:hover {
-  color: red;
 }
 
 .fa-caret-up {
@@ -499,4 +499,47 @@ li::marker {
   border: solid 1px;
   width: 100%;
   height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #ffbd59;
+}
+
+.content-footer {
+  padding: 2rem 4rem 1rem;
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr, 30px;
+}
+
+.apartados {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.apartados ul h4 {
+  margin-bottom: 12px;
+}
+.apartados ul li {
+  margin: 5px 0;
+  list-style: none;
+}
+.list-redesSociales {
+  display: flex;
+  gap: 1rem;
+}
+.list-redesSociales i {
+  font-size: 18px;
+}
+
+.copyright{
+  width: 100%;
+  background-color: #ff914d;
+}
+.copyright p {
+  max-width: 1280px;
+  margin: auto;
+  padding: 5px 4rem;
 }
