@@ -101,24 +101,28 @@ const preguntas = [
   },
 ];
 
-const juego = document.getElementById('juego-container')
+const juego = document.querySelector('#juego-container')
+const puntajeContainer = document.querySelector('#puntaje-container')
+const btnEnviar = document.getElementById('enviar-btn')
+
+let puntaje = 0
 
 const crearSeccion = () => {
 
-  preguntas.forEach( (pregunta, ind) => {
+  preguntas.forEach((pregunta, ind) => {
     const juegoSeccion = document.createElement('section')
     juegoSeccion.className = 'question'
     
     const header = document.createElement('header')
     header.className = 'headerQuestion'
 
-    const subTitleElem = document.createElement('h2')
+    const tituloSeccion = document.createElement('h2')
     const parrafoElem = document.createElement('p')
 
-    subTitleElem.textContent = `Pregunta Nro. ${ind + 1}`
+    tituloSeccion.textContent = `Pregunta Nro. ${ind + 1}`
     parrafoElem.textContent = pregunta.pregunta
 
-    header.appendChild(subTitleElem)
+    header.appendChild(tituloSeccion)
     header.appendChild(parrafoElem)
     
     juegoSeccion.appendChild(header)
@@ -126,24 +130,43 @@ const crearSeccion = () => {
     const opcionesDiv = document.createElement('div')
     opcionesDiv.className = 'opciones'
     
-    pregunta.opciones.forEach( (opcion, ind) => {
+    pregunta.opciones.forEach((opcion) => {
       const labelElem = document.createElement('label')
       const inputElem = document.createElement('input')
       inputElem.type = 'radio'
-      inputElem.name = 'opcion'
+      inputElem.name = `opcion${ind}`
+      inputElem.value = opcion
 
       const txtNodeLabel = document.createTextNode(opcion)
       labelElem.appendChild(inputElem)
       labelElem.appendChild(txtNodeLabel)
       
       opcionesDiv.appendChild(labelElem)
-    } )
-    
+    })
     
     juegoSeccion.appendChild(opcionesDiv)
-    juego.appendChild(juegoSeccion)
-  } )
+    
+    const footer = document.createElement('footer')
+    footer.className = 'footerQuestion'
+    
+    juegoSeccion.appendChild(footer)
+    juego.appendChild(juegoSeccion)    
+  })
 
 }
+
+function mostrarPuntaje() {
+  puntaje = 0
+  preguntas.forEach( (pregunta, ind) => {
+    const selectedOption = document.querySelector(`input[name="opcion${ind}"]:checked`)
+    if (selectedOption && selectedOption.value === pregunta.respuesta) {
+      puntaje++
+    }
+  })
+
+  puntajeContainer.innerHTML = `Has acertado ${puntaje} de ${preguntas.length} preguntas.`
+}
+
+btnEnviar.addEventListener('click', mostrarPuntaje)
 
 crearSeccion()
