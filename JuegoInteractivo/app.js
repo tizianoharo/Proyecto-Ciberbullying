@@ -1,172 +1,195 @@
-const preguntas = [
+const questions = [
   {
-    pregunta: '¿Qué es el ciberbullying?',
-    opciones: [
+    question: '¿Qué es el ciberbullying?',
+    choices: [
       'Un ataque físico de una persona a otra.',
       'Un acto agresivo que tiene como objetivo acosar, agredir y dañar a otro mediante medios telemáticos.',
       'Una simple broma',
       'Un videojuego'
     ],
-    respuesta: 'Un acto agresivo que tiene como objetivo acosar, agredir y dañar a otro mediante medios telemáticos.'
+    answer: 'Un acto agresivo que tiene como objetivo acosar, agredir y dañar a otro mediante medios telemáticos.'
   },
   {
-    pregunta: '¿Cuál de estas consecuencias puede sufrir la victima de ciberbullying?',
-    opciones: [
+    question: '¿Cuál de estas consecuencias puede sufrir la victima de ciberbullying?',
+    choices: [
       'Aislamiento social y problemas psicológicos.',
       'Autolesiones e intentos de suicidio.',
       'Desconfianza y conflictos en el entorno.',
       'Todas son correctas.'
     ],
-    respuesta: 'Todas son correctas.'
+    answer: 'Todas son correctas.'
   },
   {
-    pregunta: '¿Cuál de estas es una medida de protección?',
-    opciones: [
+    question: '¿Cuál de estas es una medida de protección?',
+    choices: [
       'Aceptar a cualquiera como amigo.',
       'Dar información personal.',
       'Proteger tu privacidad.',
       'No hablar con nadie sobre lo que te está ocurriendo.'
     ],
-    respuesta: 'Proteger tu privacidad.'
+    answer: 'Proteger tu privacidad.'
   },
   {
-    pregunta: '¿En cuál de estos tipos de ciberbullying el acosador mantiene su anonimato?',
-    opciones: [
+    question: '¿En cuál de estos tipos de ciberbullying el acosador mantiene su anonimato?',
+    choices: [
       'Camuflado.',
       'Stalking.',
       'Sextorsión.',
       'Ninguna de las anteriores.'
     ],
-    respuesta: 'Camuflado.'
+    answer: 'Camuflado.'
   },
   {
-    pregunta: '¿Cuál de las siguientes acciones es un rol esencial de los amigos en la prevención del ciberbullying?',
-    opciones: [
+    question: '¿Cuál de las siguientes acciones es un rol esencial de los amigos en la prevención del ciberbullying?',
+    choices: [
       'No participar ni promover el ciberbullying.',
       'Informar a un adulto si saben que alguien está sufriendo ciberbullying.',
       'Apoyar a la víctima y hacerle saber que están ahí para ayudar.',
       'Todas son correctas.'
     ],
-    respuesta: 'Todas son correctas.'
+    answer: 'Todas son correctas.'
   },
   {
-    pregunta: '¿Cuál de estos, es el caso emblemático relacionado con el ciberbullying?',
-    opciones: [
+    question: '¿Cuál de estos, es el caso emblemático relacionado con el ciberbullying?',
+    choices: [
       'Star Trek kid.',
       'Fortnite kid.',
       'Star Wars kid.',
       'Batman kid.'
     ],
-    respuesta: 'Star Wars kid.'
+    answer: 'Star Wars kid.'
   },
   {
-    pregunta: '¿En qué año se utilizó por primera vez el término ciberbullying?',
-    opciones: [
+    question: '¿En qué año se utilizó por primera vez el término ciberbullying?',
+    choices: [
       '2000.',
       '2004.',
       '2003.',
       'Ninguna es correcta.'
     ],
-    respuesta: '2004.'
+    answer: '2004.'
   },
   {
-    pregunta: 'El ciberbullying en el impacto académico ¿Qué puede causar?',
-    opciones: [
+    question: 'El ciberbullying en el impacto académico ¿Qué puede causar?',
+    choices: [
       'Problemas en el desarrollo personal y social.',
       'Menor participación en actividades escolares y sociales.',
       'Aumento de la inasistencia escolar.',
       'Todas son correctas.'
     ],
-    respuesta: 'Todas son correctas.'
+    answer: 'Todas son correctas.'
   },
   {
-    pregunta: 'En las estrategias más comunes del ciberbullying ¿en cuál se hacen pasar por alguien?',
-    opciones: [
+    question: 'En las estrategias más comunes del ciberbullying ¿en cuál se hacen pasar por alguien?',
+    choices: [
       'Difamación.',
       'Mensajes amenazantes.',
       'Suplantación.',
       'Comentarios crueles.'
     ],
-    respuesta: 'Suplantación.'
+    answer: 'Suplantación.'
   },
   {
-    pregunta: '¿Cómo puedo proteger mi información personal para que no caiga en manos equivocadas?',
-    opciones: [
+    question: '¿Cómo puedo proteger mi información personal para que no caiga en manos equivocadas?',
+    choices: [
       'No compartir tu información personal en internet.',
       'Regular el contenido compartido en redes.',
       'Mantener tu privacidad en las redes sociales.',
       'Todas son correctas.'
     ],
-    respuesta: 'Todas son correctas.'
-  },
-];
+    answer: 'Todas son correctas.'
+  }
+]
 
-const juego = document.querySelector('#juego-container')
-const puntajeContainer = document.querySelector('#puntaje-container')
-const btnEnviar = document.getElementById('enviar-btn')
+let indCurrentQuestion = 0
+let score = 0
+const containerQuiz = document.querySelector('#container-quiz')
 
-let puntaje = 0
-
-const crearSeccion = () => {
-
-  preguntas.forEach((pregunta, ind) => {
-    const juegoSeccion = document.createElement('section')
-    juegoSeccion.className = 'question'
+const showQuestion = ( index ) => {
+  containerQuiz.innerHTML = ""
+  
+  if (index >= questions.length) {
+    endGame()
+    return
+  }
+  
+  const sctnQuestion = document.createElement('section')
+  sctnQuestion.id = 'question'
+  
+  const headerQuiz = document.createElement('header')
+  headerQuiz.className = 'headerQuiz'
+  
+  const questionText = document.createElement('h1')
+  questionText.innerText = questions[index].question
+  
+  headerQuiz.appendChild(questionText)
+  sctnQuestion.appendChild(headerQuiz)
+  
+  const choices = document.createElement('div')
+  choices.id = 'choices'
+  
+  questions[index].choices.forEach( choice => {
+    const button = document.createElement('button')
+    button.className = 'btnQuiz'
+    button.textContent = choice
     
-    const header = document.createElement('header')
-    header.className = 'headerQuestion'
-
-    const tituloSeccion = document.createElement('h2')
-    const parrafoElem = document.createElement('p')
-
-    tituloSeccion.textContent = `Pregunta Nro. ${ind + 1}`
-    parrafoElem.textContent = pregunta.pregunta
-
-    header.appendChild(tituloSeccion)
-    header.appendChild(parrafoElem)
+    button.addEventListener('click', () => checkAnswer( choice, questions[index].answer ))
     
-    juegoSeccion.appendChild(header)
-    
-    const opcionesDiv = document.createElement('div')
-    opcionesDiv.className = 'opciones'
-    
-    pregunta.opciones.forEach((opcion) => {
-      const labelElem = document.createElement('label')
-      const inputElem = document.createElement('input')
-      inputElem.type = 'radio'
-      inputElem.name = `opcion${ind}`
-      inputElem.value = opcion
-
-      const txtNodeLabel = document.createTextNode(opcion)
-      labelElem.appendChild(inputElem)
-      labelElem.appendChild(txtNodeLabel)
-      
-      opcionesDiv.appendChild(labelElem)
-    })
-    
-    juegoSeccion.appendChild(opcionesDiv)
-    
-    const footer = document.createElement('footer')
-    footer.className = 'footerQuestion'
-    
-    juegoSeccion.appendChild(footer)
-    juego.appendChild(juegoSeccion)    
+    choices.appendChild(button)
   })
-
+  
+  sctnQuestion.appendChild(choices)
+  
+  const footerQuiz = document.createElement('footer')
+  footerQuiz.className = 'footerQuiz'
+  
+  const footerText = document.createElement('h2')
+  footerText.textContent = `Pregunta Nro. ${index + 1} de ${questions.length}`
+  
+  footerQuiz.appendChild(footerText)
+  sctnQuestion.appendChild(footerQuiz)
+  
+  containerQuiz.appendChild(sctnQuestion)
 }
 
-function mostrarPuntaje() {
-  puntaje = 0
-  preguntas.forEach( (pregunta, ind) => {
-    const selectedOption = document.querySelector(`input[name="opcion${ind}"]:checked`)
-    if (selectedOption && selectedOption.value === pregunta.respuesta) {
-      puntaje++
-    }
+const checkAnswer = ( selectedAnswer, correctAnswer ) => {
+  const verification = document.createElement('div')
+  verification.className = 'verification'
+  
+  if (selectedAnswer === correctAnswer) {
+    verification.classList.add('msgCorrect')
+    verification.textContent = 'Respuesta CORRECTA!!'
+    score++
+  } else {
+    verification.classList.add('msgIncorrect')
+    verification.textContent = `
+    Respuesta INCORRECTA!!
+    La opción correcta es: ${correctAnswer}`
+  }
+
+  containerQuiz.insertBefore(verification, containerQuiz.firstChild)
+ 
+  const buttons = document.querySelectorAll('.btnQuiz')
+  buttons.forEach( btn => {
+    btn.disabled = true
   })
 
-  puntajeContainer.innerHTML = `Has acertado ${puntaje} de ${preguntas.length} preguntas.`
+  setTimeout(() => {
+    indCurrentQuestion++
+    showQuestion(indCurrentQuestion)
+  }, 3000)
 }
 
-btnEnviar.addEventListener('click', mostrarPuntaje)
+const endGame = () => {
+  const div = document.createElement('div')
+  const h1 = document.createElement('h1')
+  const h2 = document.createElement('h2')
+  h1.innerText = 'Fin del juego'
+  h2.innerText = `Puntaje: ${score}`
 
-crearSeccion()
+  div.appendChild(h1)
+  div.appendChild(h2)
+  containerQuiz.appendChild(div)
+}
+
+showQuestion(indCurrentQuestion)

@@ -443,11 +443,6 @@ li::marker {
   margin-top: 2rem;
   padding: 2rem;
 }
-.leyesCards:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(imagenes/juez.jpg) no-repeat right;
-  background-size: cover;
-  transition: all .3s ease;
-}
 
 .leyUniv {
   max-width: 350px;
