@@ -29,14 +29,14 @@ body {
 }
 
 header {
-  z-index: 100;
-  position: fixed;
-  top: 0%;
   width: 100%;
-  padding-bottom: 3px;
-  background-color: rgba(255, 238, 0, 0.637);
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
+  background-color: rgba(255, 238, 0, 0.637);
+  position: fixed;
+  padding-bottom: 3px;
+  top: 0%;
+  z-index: 100;
 }
 header .logo {
   display: flex;
@@ -86,7 +86,6 @@ header .logo-text {
 
 main {
   max-width: 1280px;
-  width: 100%;
   display: grid;
   place-content: center;
   align-items: top;
@@ -137,10 +136,6 @@ aside a:hover {
   background-color: rgb(120, 120, 120);
 }
 
-.content {
-  max-width: 1180px;
-  margin: auto;
-}
 h1 {
   color: var(--clr-title);
   font-size: 28px;
@@ -169,7 +164,7 @@ p {
   padding: 11rem 0;
   margin-top: 53px;
 }
-#inicio-Section h1{
+#inicio-Section h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 5rem;
   letter-spacing: 7px;
@@ -205,6 +200,9 @@ h1 {
   align-items: center;
   gap: 2rem;
 }
+.significado img {
+  width: 300px;
+}
 #introduccion-Section .sinopsis h2 {
   font-size: 1rem;
   color: var(--clr-subTitle);
@@ -221,9 +219,6 @@ h1 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.significado img {
-  width: 300px;
-}
 
 /* 2da Sección */
 .tipos-CB {
@@ -614,4 +609,77 @@ footer .apartados {
 }
 b {
   font-weight: 600;
+}
+
+
+@media screen and (width: 425px) {
+
+  .nav-bar {
+    padding: 1rem;
+  }
+
+  main {
+    display: initial;
+  }
+
+  .content-main {
+    padding: 1rem;
+  }
+  aside {
+    display: none;
+  }
+
+  #inicio-Section h1 {
+    overflow: hidden;
+    font-size: 2rem;
+  }
+
+  #introduccion-Section .significado {
+    display: grid;
+  }
+  .significado img {
+    width: 100%;
+  }
+
+  #introduccion-Section .origen {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+
+  .separated {
+    width: 90%;
+  }
+  
+
+  .exercises {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .videoTutorial video {
+    height: max-content;
+  }
+  
+
+  footer:not(footer[class="footerQuiz"]) {
+    text-align: center;
+  }
+
+  footer .apartados {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .apartados .informacion {
+    text-align: center;
+  }
+
+  .list-desarrollador, .list-redesSociales {
+    text-align: center;
+  }
 }
