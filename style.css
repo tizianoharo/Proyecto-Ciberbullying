@@ -612,7 +612,7 @@ b {
 }
 
 
-@media screen and (width: 425px) {
+@media screen and (width <= 525px) {
 
   .nav-bar {
     padding: 1rem;
