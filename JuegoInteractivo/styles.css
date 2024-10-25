@@ -28,12 +28,6 @@ body {
   background-color: beige;
 }
 
-main {
-  position: relative;
-  text-align: center;
-  margin-top: 2rem;
-}
-
 header:not(header[class="headerQuiz"]) {
   width: 100%;
   padding-bottom: 3px;
@@ -113,7 +107,7 @@ footer .apartados {
   margin: 5px 0;
 }
 
-.list-desarrollador, .list-redesSociales{
+.list-desarrollador, .list-redesSociales {
   text-align: left;
   list-style: none;
 }
@@ -136,7 +130,7 @@ footer .apartados {
   background-color: #fcbf6f;
   border: solid 2px #000;
   border-radius: 0 0 10px 10px;
-  width: 625px;
+  max-width: 625px;
   overflow: hidden;
 }
 
@@ -203,4 +197,45 @@ footer .apartados {
 
 .msgIncorrect {
   background-color: red;
+}
+
+
+@media screen and (max-width: 425px) {
+  .nav-bar {
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+  }
+
+  .nav-bar .option-list {
+    display: none;
+  }
+
+  footer:not(footer[class="footerQuiz"]) {
+    text-align: center;
+  }
+
+  footer .apartados {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .apartados .informacion {
+    text-align: center;
+  }
+
+  .list-desarrollador, .list-redesSociales {
+    text-align: center;
+  }
+  /* .formulario {
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
 }
