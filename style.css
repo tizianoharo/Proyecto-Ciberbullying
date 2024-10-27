@@ -29,19 +29,21 @@ body {
 }
 
 header {
+  position: relative;
   width: 100%;
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
-  background-color: rgba(255, 238, 0, 0.637);
+  background: linear-gradient(var(--clr-header-top), var(--clr-header-bottom));
   position: fixed;
-  padding-bottom: 3px;
+  padding: 0 2.5rem;
   top: 0%;
   z-index: 100;
 }
 header .logo {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 12px;
 }
 header .logo-icon {
   text-decoration: none;
@@ -60,24 +62,29 @@ header .logo-text {
   cursor: pointer;
 }
 
-.nav-bar {
+.barsOpt {
+  display: none;
+}
+.container {
   /* background: #5dc246; */
   background: linear-gradient(var(--clr-header-top), var(--clr-header-bottom));
-  padding: 0.7rem 3rem;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1280px;
+  margin: auto;
 }
-.nav-bar .option-list {
-  list-style: none;
+.nav-bar ul {
   display: flex;
-  gap: 1.5rem;
+  list-style: none;
+  gap: 2rem;
 }
-.option-list li a {
+.nav-bar li a {
   text-decoration: none;
   color: #000;
 }
-.option-list li a:hover {
+.nav-bar li a:hover {
   color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0 , 0, 0.6);
   transition: all 0.25s;
@@ -95,10 +102,10 @@ main {
 
 /* Indice */
 aside {
-  position: sticky;
-  top: 2.5rem;
-  padding-top: 40px;
-  width: 90%;
+ position: sticky;
+ margin-top: 40px;
+ top: 80px;
+ width: 92.5%;
 }
 
 aside a {
@@ -162,7 +169,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 11rem 0;
-  margin-top: 53px;
+  margin-top: 60px;
 }
 #inicio-Section h1 {
   font-family: 'Poppins', sans-serif;
@@ -173,6 +180,7 @@ p {
   text-decoration: none;
   text-align: center;
   color: #fff;
+  margin-bottom: 0;
 }
 
 section:not(section[id="ImpactoAcadem-subSect"], [id="rolAyuda-subSect"]) {
@@ -339,7 +347,7 @@ li::marker {
   transition: transform 0.2s ease;
 }
 
-.fa-solid {
+.fa-solidEst {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -614,9 +622,19 @@ b {
   h1 {
     text-align: center;
   }
-
+  header {
+    padding: 0 1rem;
+  }
+  .container {
+    padding: 0;
+  }
   .nav-bar {
-    padding: 1rem;
+    display: none;
+  }
+  .barsOpt {
+    display: initial;
+    font-size: x-large;
+    cursor: pointer;
   }
 
   main {
@@ -682,7 +700,8 @@ b {
     width: 90%;
   }
   
-
+  /* Juego */
+  
   .exercises {
     margin: 1rem;
     display: flex;

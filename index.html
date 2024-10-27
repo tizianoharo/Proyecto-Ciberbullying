@@ -9,23 +9,28 @@
 </head>
 <body>
   <header>
-    <nav class="nav-bar">
+    <div class="container">
       <div class="logo">
         <a class="logo-icon" href="#">CB</a>
         <a class="logo-text" href="#">Ciberbullying</a>
       </div>
-      <ul class="option-list">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#nosotros-inf">Nosotros</a></li>
-      </ul>
-    </nav>
+      <div class="barsOpt" id="barsOpt">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#nosotros-inf">Nosotros</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section id="inicio-Section">
     <h1 class="title">Ciberbullying</h1>
   </section>
   <main>
-    <aside>
+    <aside class="containerAside">
       <aside>
         <article class="introduccion-opt optPrinc">
           <a href="#introduccion-Section">1. Introducción</a>
@@ -46,6 +51,7 @@
           <a href="#leyes-Section">6. Leyes</a>
         </article>
       </aside>
+
     </aside>
     <div class="content-main">
       <section id="introduccion-Section">
@@ -186,22 +192,22 @@
           </p>
           <div class="estratPerp-CB">
             <article class="estrat1 estratUniv">
-              <i class="fa-solid fa-circle-exclamation"></i>
+              <i class="fa-solid fa-circle-exclamation fa-solidEst"></i>
               <h2>Mensajes Amenazantes</h2>
               <p>Enviar mensajes, imágenes o videos hirientes, abusivos o amenazantes a través de plataformas de mensajería.</p>
             </article>
             <article class="estrat2 estratUniv">
-              <i class="fa-solid fa-user-secret"></i>
+              <i class="fa-solid fa-user-secret fa-solidEst"></i>
               <h2>Difamación</h2>
               <p>Difundir mentiras o publicar fotografías y videos vergonzosos de alguien en las redes sociales.</p>
             </article>
             <article class="estrat3 estratUniv">
-              <i class="fa-solid fa-mask"></i>
+              <i class="fa-solid fa-mask fa-solidEst"></i>
               <h2>Suplantación</h2>
               <p>Hacerse pasar por otra persona y enviar mensajes agresivos en nombre de dicha persona o a través de cuentas falsas.</p>
             </article>
             <article class="estrat4 estratUniv">
-              <i class="fa-solid fa-comments"></i>
+              <i class="fa-solid fa-comments fa-solidEst"></i>
               <h2>Comentarios Crueles</h2>
               <p>Hacer comentarios despectivos o crueles en publicaciones de la víctima.</p>
             </article>
@@ -259,7 +265,7 @@
           <article class="leyUniv">
             <h2>Ley 25.326</h2>
             <p class="leyNombre">Protección de los datos personales</p>
-            <div class="container">
+            <div>
               <div class="contenidoLeyes">
                 <p>
                   La Ley 25.326 protege la información personal de las personas, asegurando que sus datos sean tratados con respeto y seguridad.
@@ -286,7 +292,7 @@
           <article class="leyUniv">
             <h2>Ley 26.388</h2>
             <p class="leyNombre">Código penal</p>
-            <div class="container">
+            <div>
               <div class="contenidoLey2  contenidoLeyes">
                 <p>
                   La Ley 26.388 se encuentra dentro del Código Penal y nos presenta delitos relacionados con el acoso y la intimidación, incluyendo entre ellos el ciberbullying.
