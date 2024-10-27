@@ -241,14 +241,17 @@ h1 {
 .tipoUniv:first-child {
   /* background: #ff9305; */
   background: #F6E96B;
+  background: linear-gradient(#946c00, #F6E96B);
 }
 .tipoUniv:nth-child(2) {
   /* background: #ffc505; */
   background: #BEDC74;
+  background: linear-gradient(#00720f96, #BEDC74);
 }
 .tipoUniv:last-child {
   /* background: #e6ff05; */
   background: #A2CA71;
+  background: linear-gradient(#5f7a00, #A2CA71);
 }
 .tipoUniv h2 {
   letter-spacing: 2px;
@@ -266,9 +269,12 @@ h1 {
 /* 3era Seccion */
 .consecuencias-CB {
   background: #e6f5e9;
-  margin: 2rem 0;
+  margin: 2rem auto;
   padding: 2rem;
   border-radius: 12px;
+}
+.consecuencias-CB h2 {
+  text-decoration: double underline;
 }
 .consec-list {
   display: grid;
@@ -300,23 +306,11 @@ li::marker {
 }
 
 /* 2da Subseccion - Roles Esenciales */
-#rolAyuda-subSect {
-  background: #e6f5e9;
-  padding: 2rem;
-  border-radius: 12px;
-}
-.roles-list {
-  display: grid;
-  gap: 1rem;
-  margin: 1rem 3rem;
-}
+
 .roles-list span, .consec-list span {
   text-transform: capitalize;
   color: #155724;
   font-weight: bold;
-}
-.roles-list li p {
-  color: #1d7a37;
 }
 
 /* 4ta Seccion - Estrategias */
@@ -406,11 +400,15 @@ li::marker {
   border: solid 1px #98f1aa;
   border-left: solid 3px #98f1aa;
   border-radius: 6px;
-  height: 130px;
+  height: auto;
   overflow: hidden;
   display: grid;
   place-content: center;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+}
+.medidaUniv:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 .medidaUniv:first-child,
 .medidaUniv:nth-child(3),
@@ -613,6 +611,9 @@ b {
 
 
 @media screen and (width <= 525px) {
+  h1 {
+    text-align: center;
+  }
 
   .nav-bar {
     padding: 1rem;
@@ -625,10 +626,12 @@ b {
   .content-main {
     padding: 1rem;
   }
+
   aside {
     display: none;
   }
 
+  /* Inicio */
   #inicio-Section h1 {
     overflow: hidden;
     font-size: 2rem;
@@ -646,6 +649,34 @@ b {
     flex-direction: column-reverse;
   }
 
+  /* Consecuencias */
+  .consec-list {
+    gap: 1rem;
+    margin: 1rem 0 0 0rem;
+    text-align: left;
+    list-style: none;
+  }
+  
+  #ImpactoAcadem-subSect, #rolAyuda-subSect {
+    margin: 0;
+  }
+  
+  #ImpactoAcadem-subSect img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estrategias */
+  
+  .estratPerp-CB {
+    margin: 2rem 1rem 0;
+  }
+
+  /* Medidas */
+
+  .medidasProtec-CB {
+    text-align: center;
+  }
 
   .separated {
     width: 90%;
@@ -656,6 +687,16 @@ b {
     margin: 1rem;
     display: flex;
     flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .exercises h1 {
+    font-size: 24px;
+  }
+  .exercises h2 {
+    font-size: 20px;
+  }
+  .exercises p {
+    font-size: 16px;
   }
   .videoTutorial video {
     height: max-content;
