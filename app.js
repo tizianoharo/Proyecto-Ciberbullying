@@ -1,11 +1,7 @@
-const secciones = [
+const sections = [
   {
     text: 'Inicio',
     link: ''
-  },
-  {
-    text: 'Nosotros',
-    link: 'nosotros-inf'
   },
   {
     text: '1. Introducción',
@@ -31,6 +27,10 @@ const secciones = [
     text: '6. Leyes',
     link: 'leyes-Section'
   },
+  {
+    text: 'Nosotros',
+    link: 'nosotros-inf'
+  },
 
 ]
 
@@ -49,11 +49,11 @@ showChoices()
 function addSections() {
   const ul = document.createElement('ul')
   
-  for(let seccion of secciones) {
+  for(let section of sections) {
     const li = document.createElement('li')
     const a = document.createElement('a')
-    a.innerText = seccion.text
-    a.href = `#${seccion.link}`
+    a.innerText = section.text
+    a.href = `#${section.link}`
     
     li.appendChild(a)
     ul.appendChild(li)

@@ -25,7 +25,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--BG-2ndSection);
+  background-color: beige;
 }
 
 header {
@@ -89,13 +89,13 @@ header .logo-text {
 }
 .navBar ul li:not(
   .navBar ul li:first-child, 
-  .navBar ul li:nth-child(2)) {
+  .navBar ul li:last-child) {
   display: none;
 }
 .navBar li a:hover {
-  color: #fff;
-  text-shadow: 0px 0px 10px rgba(0, 0 , 0, 0.6);
-  transition: all 0.25s;
+  color: whitesmoke;
+  border-bottom: solid 2px #000;
+  transition: color 0.25s ease;
 }
 
 
@@ -626,7 +626,7 @@ b {
 }
 
 
-@media screen and (width <= 525px) {
+@media screen and (width <= 625px) {
   h1 {
     text-align: center;
   }
@@ -642,23 +642,22 @@ b {
   .navBar.active {
     display: block;
   }
-   .navBar {
-    text-align: center;
+  .navBar {
+    font-size: 14px;
     position: absolute;
     top: 100%;
     right: 0;
-    background: linear-gradient(#FF8F00, #FFDB00);
+    background: linear-gradient(#ff9100d5, #ffdd00cb);
     border: solid 1px #000;
-    width: 50%;
-   }
-   .navBar ul {
+    width: 40%;
+  }
+  .navBar ul {
     display: grid;
     gap: 0;
-   }
-   .navBar ul li {
-    border-bottom: solid 2px #ffe600;
-    padding: .5rem;
-   }
+  }
+  .navBar ul li {
+    padding: 1rem;
+  }
   .barsOpt {
     display: initial;
     font-size: x-large;
@@ -666,10 +665,14 @@ b {
   }
   .navBar ul li:not(
     .navBar ul li:first-child, 
-    .navBar ul li:nth-child(2)) {
+    .navBar ul li:last-child) {
       display: block;
+      margin-left: 1rem;
   }
-
+  .navBar ul li:first-child,
+  .navBar ul li:last-child {
+    background-color: rgba(255, 180, 41, 0.747);
+  }
   main {
     display: initial;
   }
