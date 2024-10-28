@@ -87,7 +87,10 @@ footer:not(footer[class="footerQuiz"]) {
   background: linear-gradient(#ffa825, #ffbd59);
   text-align: center;
 }
-
+.copyright {
+  padding: 0.5rem 0;
+  background-color: #ffa825;
+}
 footer .apartados {
   display: flex;
   gap: 4rem;
@@ -105,17 +108,17 @@ footer .apartados {
 }
 .apartUniv li {
   margin: 5px 0;
-}
-
-.list-desarrollador, .list-redesSociales {
-  text-align: left;
   list-style: none;
 }
-
-.copyright {
-  padding: 0.5rem 0;
-  background-color: #ffa825;
+.redSocial {
+  font-size: 32px;
+  color: #000;
 }
+.redSocial i:hover {
+  transform: scale(1.2);
+  transition: transform .45s ease;
+}
+
 
 #container-quiz {
   gap: 2rem;
