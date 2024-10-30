@@ -162,9 +162,9 @@ const checkAnswer = ( selectedAnswer, correctAnswer ) => {
     score++
   } else {
     verification.classList.add('msgIncorrect')
-    verification.textContent = `
-    Respuesta INCORRECTA!!
-    La opción correcta es: ${correctAnswer}`
+    verification.innerHTML = `
+    <span>Respuesta INCORRECTA!!</span> <br>
+    La opción correcta es: <span>${correctAnswer}</span>`
   }
 
   containerQuiz.insertBefore(verification, containerQuiz.firstChild)
@@ -182,13 +182,16 @@ const checkAnswer = ( selectedAnswer, correctAnswer ) => {
 
 const endGame = () => {
   const div = document.createElement('div')
+  div.className = 'divQuiz'
   const h1 = document.createElement('h1')
-  const h2 = document.createElement('h2')
+  const p = document.createElement('p')
   h1.innerText = 'Fin del juego'
-  h2.innerText = `Puntaje: ${score}`
+  p.innerHTML = `
+  Felicitaciones. Haz obtenido un puntaje de: <br> <br> 
+  <span class="puntaje">${score}</span> / <span class="nroDePreguntas">${questions.length}</span>`
 
   div.appendChild(h1)
-  div.appendChild(h2)
+  div.appendChild(p)
   containerQuiz.appendChild(div)
 }
 

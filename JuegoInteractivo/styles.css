@@ -87,7 +87,10 @@ footer:not(footer[class="footerQuiz"]) {
   background: linear-gradient(#ffa825, #ffbd59);
   text-align: center;
 }
-
+.copyright {
+  padding: 0.5rem 0;
+  background-color: #ffa825;
+}
 footer .apartados {
   display: flex;
   gap: 4rem;
@@ -105,17 +108,17 @@ footer .apartados {
 }
 .apartUniv li {
   margin: 5px 0;
-}
-
-.list-desarrollador, .list-redesSociales {
-  text-align: left;
   list-style: none;
 }
-
-.copyright {
-  padding: 0.5rem 0;
-  background-color: #ffa825;
+.redSocial {
+  font-size: 32px;
+  color: #000;
 }
+.redSocial i:hover {
+  transform: scale(1.2);
+  transition: transform .45s ease;
+}
+
 
 #container-quiz {
   gap: 2rem;
@@ -191,16 +194,47 @@ footer .apartados {
   z-index: 1; 
 }
 
+.divQuiz {
+  background: linear-gradient(#ffca7a, #ffca7ae0,  beige);
+  padding: 0 5rem;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.divQuiz h1 {
+  text-transform: uppercase;
+}
+.divQuiz p {
+  font-size: 1.2rem;
+}
+.divQuiz span {
+  font-weight: bold;
+}
+.divQuiz span.nroDePreguntas {
+  color: #704300;
+}
+
 .msgCorrect {
-  background-color: rgba(0, 163, 0, 0.808);
+  background-color: #1eb357d2;
+  font-weight: bold;
 }
 
-.msgIncorrect {
-  background-color: red;
+.msgIncorrect {  
+  background-color: #f42a2ad5;
+}
+.msgIncorrect span {
+  font-weight: bold;
+}
+.msgIncorrect span:last-child {
+  color: #ffd6d6;
+
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 625px) {
   .nav-bar {
     display: grid;
     place-content: center;
@@ -231,6 +265,14 @@ footer .apartados {
   .list-desarrollador, .list-redesSociales {
     text-align: center;
   }
+
+  .divQuiz h1 {
+    font-size: 1.5rem;
+  }
+  .divQuiz p {
+    font-size: 1rem;
+  }
+
   /* .formulario {
     height: 100%;
     padding: 0 1rem;

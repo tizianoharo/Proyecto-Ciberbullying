@@ -26,6 +26,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: beige;
+  text-align: left;
 }
 
 header {
@@ -60,6 +61,10 @@ header .logo-text {
   font-size: 1.25rem;
   letter-spacing: 2px;
   cursor: pointer;
+}
+.logo-text:hover {
+  letter-spacing: 1px;
+  transition: letter-spacing .65s ease;
 }
 
 .barsOpt {
@@ -131,19 +136,6 @@ aside a:hover {
   background-color: #c8f0cc;
   transition: all 0.3s ease; 
 }
-.subSeccion {  
-  display: none;
-}
-
-.consec-opt:hover {
-  .subSeccion {
-    display: initial;
-    position: relative;
-    left: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-}
 .subSeccion a:first-child:hover {
   background-color: rgb(100, 100, 102);
 }
@@ -191,8 +183,8 @@ p {
   margin-bottom: 0;
 }
 
-section:not(section[id="ImpactoAcadem-subSect"], [id="rolAyuda-subSect"]) {
-  text-align: justify;
+section:not(section[id="ImpactoAcadem-subSect"], 
+[id="rolAyuda-subSect"]) {
   padding: 5rem 0;
 }
 
@@ -256,18 +248,15 @@ h1 {
 }
 .tipoUniv:first-child {
   /* background: #ff9305; */
-  background: #F6E96B;
-  background: linear-gradient(#946c00, #F6E96B);
+  background: linear-gradient(#eed91c, #F6E96B);
 }
 .tipoUniv:nth-child(2) {
   /* background: #ffc505; */
-  background: #BEDC74;
-  background: linear-gradient(#00720f96, #BEDC74);
+  background: linear-gradient(#abdf28, #BEDC74);
 }
 .tipoUniv:last-child {
   /* background: #e6ff05; */
-  background: #A2CA71;
-  background: linear-gradient(#5f7a00, #A2CA71);
+  background: linear-gradient(#8bdb2a, #A2CA71);
 }
 .tipoUniv h2 {
   letter-spacing: 2px;
@@ -288,6 +277,10 @@ h1 {
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 12px;
+}
+.consecuencias-CB:hover {
+  background: #c6e7cd;
+  transition: background .65s ease;
 }
 .consecuencias-CB h2 {
   text-decoration: double underline;
@@ -337,13 +330,15 @@ li::marker {
   margin: 3rem 2rem 0;
 }
 .estratUniv {
-  background: linear-gradient(135deg, #66b0964b, #1b5739a4);
-  color: #fff;
+  /* background: linear-gradient(135deg, #66b0964b, #1b5739a4); */
+  background: rgb(228, 248, 229);
+  color: #353535;
   font-weight: 500;
   padding: 20px;
   border-top: solid 2px rgb(0, 55, 32);
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(71, 71, 71, 0.476);
+  border-bottom: solid 10px rgb(0, 55, 32);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 10px rgba(0, 92, 38, 0.747);
   text-align: center;
 }
 .estratUniv h2 {
@@ -412,15 +407,19 @@ li::marker {
 }
 
 .medidaUniv {
+  color: #353535;
   background: #e6f5e9;
   border: solid 1px #98f1aa;
-  border-left: solid 3px #98f1aa;
+  border-left: solid 3px #5d946b;
   border-radius: 6px;
   height: auto;
   overflow: hidden;
   display: grid;
   place-content: center;
   padding: 1rem;
+}
+.medidaUniv h2 {
+  color: rgb(0, 49, 25);
 }
 .medidaUniv:hover {
   transform: scale(1.05);
@@ -451,6 +450,8 @@ li::marker {
   flex-wrap: wrap;
   margin-top: 2rem;
   padding: 2rem;
+  border: solid 2px #000;
+  border-bottom: solid 4px #000;
 }
 
 .leyUniv {
@@ -459,6 +460,10 @@ li::marker {
   background-color: #caffe5d3;
   padding: 1.5rem 1rem;
   border-top: solid 3px #004434;
+}
+.leyUniv:hover {
+  background-color: #caffe5;
+  transition: background-color .6s ease;
 }
 
 .leyUniv h2 {
@@ -548,7 +553,7 @@ li::marker {
   margin: 0;
 }
 .exercises h2 {
-  color: #7ed957;
+  color: #48b681;
   font-size: 22px;
   margin: 1rem 0  ;
 }
@@ -609,11 +614,15 @@ footer .apartados {
 }
 .apartUniv li {
   margin: 5px 0;
-}
-
-.list-desarrollador, .list-redesSociales{
-  text-align: left;
   list-style: none;
+}
+.redSocial {
+  font-size: 32px;
+  color: #000;
+}
+.redSocial i:hover {
+  transform: scale(1.2);
+  transition: transform .45s ease;
 }
 
 
@@ -649,7 +658,7 @@ b {
     right: 0;
     background: linear-gradient(#ff9100d5, #ffdd00cb);
     border: solid 1px #000;
-    width: 40%;
+    width: 50%;
   }
   .navBar ul {
     display: grid;
@@ -662,6 +671,10 @@ b {
     display: initial;
     font-size: x-large;
     cursor: pointer;
+  }
+  .barsOpt:active {
+    transform: scale(1.2);
+    transition: transform .25s ease;
   }
   .navBar ul li:not(
     .navBar ul li:first-child, 
@@ -724,6 +737,7 @@ b {
   
   .estratPerp-CB {
     margin: 2rem 1rem 0;
+    gap: 2.5rem;
   }
 
   /* Medidas */
@@ -735,10 +749,16 @@ b {
   .separated {
     width: 90%;
   }
+
+  /* Leyes */
   
+  .leyesCards {
+    gap: 2rem;
+  }
   /* Juego */
   
   .exercises {
+    text-align: center;
     margin: 1rem;
     display: flex;
     flex-direction: column;
