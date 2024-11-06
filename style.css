@@ -98,8 +98,8 @@ header .logo-text {
   display: none;
 }
 .navBar li a:hover {
-  color: whitesmoke;
-  border-bottom: solid 2px #000;
+  color: #fff;
+  border-bottom: solid 2px #fff;
   transition: color 0.25s ease;
 }
 
