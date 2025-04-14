@@ -33,6 +33,7 @@ const sections = [
   },
 
 ]
+console.log('Halo');
 
 
 const navBar = document.getElementById('nav-bar')
